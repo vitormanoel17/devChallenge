@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <div class="background-top"></div>
+        <div class="background-bottom"></div>
+        <div class="formBox">
+            <div class="form border">
+                <form id="myForm" action="https://91c252f3-1cad-4a51-91bf-debf8ae8d2af.mock.pstmn.io/form" method="post">
+                    <fieldset>
+                        <div class="formStep-1">
+                            <h2>Register</h2>
+                            <label for="username">Name:</label><br>
+                            <input class="border" id="username" name="name" type="text" placeholder="enter your name"><br>
+                            <label for="Email">Email:</label><br>
+                            <input class="border" id="Email" name="email" type="email" placeholder="example@gmail.com" required><br>
+                            <div class="submit">
+                                <button form="myForm" type="button" onclick="nextStep()">Continue</button>
+                            </div>
+                        </div>
+                        <div class="formStep-2">
+                            <h2>Which topics you are interested in?</h2>
+                            <button type="button" id="topic-1" onclick="addTopics(this)" class="topics" value="Software Development">Software Development</button> <br>
+                            <button type="button" id="topic-2" onclick="addTopics(this)" class="topics" value="User Experience"> User Experience</button><br>
+                            <button type="button" id="topic-3" onclick="addTopics(this)" class="topics" value="Graphic Design"> Graphic Design</button><br>
+                            <div class="submit">
+                                <button form="myForm" type="button" onclick="nextStep()">Continue</button>
+                            </div>
+                        </div>
+                        <div class="formStep-3">
+                            <div class="sections">
+                                <h2> Summary </h2>
+                                <div class="resume">
+                                    <p><span>Name:</span> </p>
+                                    <p><span>Email:</span> </p>
+                                    <p><span>Topics:</span></p>
+                                    <ul>
+                                    </ul>
+                                </div>
+    
+                                <div class="submit">
+                                    <button form="myForm" onclick="nextStep()" type="button"> Confirm </button>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="steps">
+                <span>Step 1 of 3</span>
+                <div style="margin-left: 1rem;">
+                    <div class="step activeStep" id="step-1"></div>
+                    <div class="step" id="step-2"></div>
+                    <div class="step" id="step-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
